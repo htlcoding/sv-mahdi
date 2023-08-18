@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontrolleure finden</title>
+    <link rel="stylesheet" href="tabellen.css">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            flex-direction: column;
+            align-items: center;
+        }
+        body {
+            overflow: hidden;
+        }
+        #contentFrame {
+            width: 100%; /* Make contentFrame width 100% of the screen */
+            height: calc(100% - 60px); /* Subtract toggle-container height from 100% */
+            border: none;
+            overflow: auto;
+        }
+        .toggle-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+        .toggle-label {
+        cursor: pointer;
+        padding: 8px 12px;
+        background-color: #333;
+        border: 1px solid #ccc;
+        font-family: Arial;
+        color: #fff; /* Change to your desired font color */
+        border-style: groove;
+        border-radius: 20px; /* Add this line for rounded borders */
+        font-size: 140%;
+        margin-left: 20px;
+        font-weight: bold;
+        }
+        .toggle-input {
+            display: none;
+            color: white;
+        }
+        .toggle-label:hover {
+            background-color: #f0f0f0;
+        }
+        .toggle-input:checked + .toggle-label {
+            background-color: #2196F3;
+            color: white;
+            border: 1px solid #2196F3;
+        }
+        .toggle-input:checked + .toggle-label {
+        background-color: #2196F3;
+        color: white;
+        border: 1px solid #2196F3;
+    }
+        #contentFrame {
+    /* ... deine anderen CSS-Regeln ... */
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1; /* Standardwert für Sichtbarkeit */
+}
+
+#contentFrame.fade-out {
+    opacity: 0;
+    pointer-events: none; /* Klicks verhindern, während die Animation läuft */
+}
+
+
+    </style>
+</head>
+<body>
+<div id="text"><h1 id="title">Spielerliste</h1></div>
+    <table>
+        <tr>
+            <th>Verein</th>
+            <th>Nummer</th>
+            <th>Name</th>
+            <th>Sportart</th>
+            <th>Position</th>
+        </tr>
+        <tr>
+            <td><img src="resources/Unbenannt.PNG" alt="Logo" width="50px"></td>
+            <td>1</td>
+            <td>Hussein A.</td>
+            <td>Fußball</td>
+            <td>Sturm</td>
+        </tr>
+        <tr>
+            <td><img src="resources/Unbenannt.PNG" alt="Logo" width="50px"></td>
+            <td>2</td>
+            <td>Abdullah H.</td>
+            <td>Fußball</td>
+            <td>Tormann</td>
+        </tr>
+        <tr>
+            <td><img src="resources/Unbenannt.PNG" alt="Logo" width="50px"></td>
+            <td>3</td>
+            <td>Karim D.</td>
+            <td>Basketball</td>
+            <td>Shooting Guard</td>
+        </tr>
+        <tr>
+            <td><img src="resources/Unbenannt.PNG" alt="Logo" width="50px"></td>
+            <td>4</td>
+            <td>Alireza H.</td>
+            <td>Fußball</td>
+            <td>Verteildigung</td>
+        </tr>
+    </table>
+</body>
+</html>
