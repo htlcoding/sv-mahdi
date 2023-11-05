@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SV Mahdi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #fff;
+            color: #fff;
+        }
+
+        #header {
+            background-color: #007d8d;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #logo img {
+            width: 100px;
+            height: 100px;
+        }
+
+        #menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #menu ul li {
+            display: inline;
+            margin-right: 20px;
+            position: relative;
+        }
+
+        #menu ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 24px; /* Hier haben wir die Textgröße auf 24 Pixel geändert */
+            transition: color 0.3s;
+        }
+
+        #menu ul li a:hover {
+            color: #a50044;
+        }
+
+        #menu ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #007d8d;
+            padding: 0;
+            z-index: 1;
+            width: 200px; /* Breite des Dropdown-Menüs anpassen */
+        }
+
+        #menu ul li:hover ul {
+            display: block;
+        }
+
+        #menu ul ul li {
+            display: block;
+            margin: 0;
+            padding: 10px 0;
+        }
+
+        #menu ul ul li a {
+            color: #fff;
+        }
+
+        #content {
+            width: 100%;
+        }
+
+        #slideshow {
+            width: 100%;
+            height: 900px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        #slideshow img {
+            width: 100%;
+            height: 900px;
+            object-fit: cover;
+            position: absolute;
+            transition: opacity 1s;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .overlay:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <div id="logo">
+            <img src="./Bilder/logol.png" alt="Mein Logo">
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="boerse.html">Spieler</a></li>
+                <li><a href="#">Bildergalarie</a></li>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="content">
+        <div id="slideshow">
+            <img src="./Bilder/bild3.jpeg" alt="Bild 1">
+            <img src="./Bilder/logofootball.png" alt="Bild 2">
+            <img src="./Bilder/ile.jpeg" alt="Bild 3">
+        </div>
+    </div>
+    <script>
+        const slideshow = document.getElementById('slideshow');
+        const images = [
+            "./Bilder/bild3.jpeg",
+            "./Bilder/logofootball.png",
+            "./Bilder/file.jpeg"
+        ];
+        let index = 0;
+
+        function changeImage() {
+            const currentImage = slideshow.querySelector('img');
+            currentImage.style.opacity = 0;
+            setTimeout(() => {
+                currentImage.style.display = 'none';
+                index = (index + 1) % images.length;
+                const newImage = new Image();
+                newImage.src = images[index];
+                newImage.alt = `Bild ${index + 1}`;
+                newImage.style.opacity = 0;
+                newImage.style.display = 'block';
+                slideshow.appendChild(newImage);
+                setTimeout(() => {
+                    newImage.style.opacity = 1;
+                }, 10);
+            }, 1000);
+        }
+
+        changeImage();
+        setInterval(changeImage, 5000);
+    </script>
+</body>
+</html>
