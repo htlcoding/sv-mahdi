@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Spieler</title>
+  <link rel="stylesheet" href="stylesheet2.css">
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background-color: #007d8d;
+        color: #fff;
+    }
+
+    #header {
+        background-color: #007d8d;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #logo img {
+        width: 100px;
+        height: 100px;
+    }
+
+    #menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #menu ul li {
+        display: inline;
+        margin-right: 20px;
+        position: relative;
+    }
+
+    #menu ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+        font-size: 24px;
+        transition: color 0.3s;
+    }
+
+    #menu ul li a:hover {
+        color: #a50044;
+    }
+
+    #menu ul li ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #007d8d;
+        padding: 0;
+        z-index: 1;
+        width: 200px;
+    }
+
+    #menu ul li:hover ul {
+        display: block;
+    }
+
+    #menu ul ul li {
+        display: block;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    #menu ul ul li a {
+        color: #fff;
+    }
+
+    #content {
+        width: 100%;
+    }
+
+    #slideshow {
+        width: 100%;
+        height: 900px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    #slideshow img {
+        width: 100%;
+        height: 900px;
+        object-fit: cover;
+        position: absolute;
+        transition: opacity 1s;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+
+    .overlay:hover {
+        opacity: 1;
+    }
+
+    #teachers {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .teacher {
+        width: 23%;
+        margin-bottom: 20px;
+    }
+
+    .teacher img {
+        max-width: 100%;
+        height: auto;
+        
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="nd">Spieler</h1>
+  </header>
+  <main>
+    <section id="teachers">
+      <div class="teacher">
+        <img src="./Spieler/Shafiewazzada.jpeg" alt="teacher" width="200px">
+        <h3>Shafie Wazzada</h3>
+        <p>2011</p>
+      </div>
+      <div class="teacher">
+        <img src="./Spieler/Miladshirzad.jpeg" alt="teacher" width="200px">
+        <h3>Milad Shirzad</h3>
+        <p>2011</p>
+      </div>
+      <div class="teacher">
+        <img src="./Spieler/Yasinqasemi.jpeg" alt="teacher" width="200px">
+        <h3>Yasin Qasemi</h3>
+        <p>2011</p>
+      </div>
+      <div class="teacher">
+        <img src="./Spieler/TahaQasemi.jpeg" alt="teacher" width="200px">
+        <h3>Taha Qasemi</h3>
+        <p>2013</p>
+      </div>
+      <div class="teacher">
+        <img src="./Spieler/MohammedMohammadi.jpeg" alt="teacher" width="200px">
+      <h3>Mohammed Mohammadi</h3>
+      <p>2013</p>
+    </div>
+    <div class="teacher">
+        <img src="./Spieler/Alirezaallamy.jpeg" alt="teacher" width="200px">
+      <h3>Alireza Al Lamy</h3>
+      <p>2011</p>
+    </div>
+    <div class="teacher">
+      <img src="./Spieler/Miladrezai.jpeg" alt="teacher" width="200px">
+    <h3>Milad Rezai</h3>
+    <p>2012</p>
+  </div>
+  <div class="teacher">
+    <img src="./Spieler/MohammedHusseinRezai.jpeg" alt="teacher" width="200px">
+  <h3>Mohammed Hussein Rezai</h3>
+  <p>2014</p>
+</div>
+<div class="teacher">
+  <img src="./Spieler/AliHaidari.jpeg" alt="teacher" width="200px">
+<h3>Ali Haidari</h3>
+<p>2009</p>
+</div>
+<div class="teacher">
+<img src="./Spieler/MahdiMohammedi.jpeg" alt="teacher" width="200px">
+<h3>Mahdi Mohammadi</h3>
+<p>2012</p>
+</div>
+<div class="teacher">
+<img src="./Spieler/BenjaminNuri.jpeg" alt="teacher" width="200px">
+<h3>Benjamin Nuri</h3>
+<p>2013</p>
+</div>
+<div class="teacher">
+<img src="./Spieler/AbbasQanbari.jpeg" alt="teacher" width="200px">
+<h3>Abbas Qanbari</h3>
+<p>2011</p>
+</div>
+<div class="teacher">
+<img src="./Spieler/Abofazl zaiai.jpeg" alt="teacher" width="200px">
+<h3>Abolfazl Ziai</h3>
+<p>2013</p>
+</div>
+<div class="teacher">
+<img src="./Spieler/Mustafazawari.jpeg" alt="teacher" width="200px">
+<h3>Mustafa Zawari</h3>
+<p>2010</p>
+</div>
+<div class="teacher">
+<img src="./Spieler/Erfanmohammadi.jpeg" alt="teacher" width="200px">
+<h3>Erfan Mohammadi</h3>
+<p>2010</p>
+</div>
+<div class="teacher">
+<img src="./Spieler/Abdoollmohseni.jpeg" alt="teacher" width="200px">
+<h3>Abdooll Mohseni</h3>
+<p>2011</p>
+</div>
+<div class="teacher">
+<img src="./Spieler/SayedMahdiHashimi.jpeg" alt="teacher" width="200px">
+<h3>Sayed Mahdi Hashimi</h3>
+<p>2016</p>
+    </section>
+  </main>
+</body>
+</html>
