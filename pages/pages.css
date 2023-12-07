@@ -1,0 +1,354 @@
+/* Resetting default margin and padding for the entire document */
+body {
+    margin: 0;
+    padding: 0;
+}
+#titel{
+    font-size: 430%;
+}
+/* Styling the about-us section */
+.about-us {
+    background-color: #f0f0f0; /* Setting a light gray background */
+    padding: 20px; /* Adding padding to the content */
+    text-align: center; /* Centering the text */
+}
+/* Styling paragraphs within the about-us section */
+.about-us p {
+    font-size: 16px;
+    color: #333; /* Setting a dark gray text color */
+}
+
+/* Styling the logo container */
+#logogr {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centering horizontally */
+    align-items: center; /* Centering vertically */
+    margin-top: 10px;
+    margin-bottom: 225px;
+    height: 62vh; /* Setting height to 60% of the viewport height */   
+}
+#logogr a {
+color: #333;
+font-size: x-large;
+}
+/* Styling the scroll down text */
+#logogr p {
+    position: absolute;
+    bottom: 0; /* Aligning the text to the bottom of the container */
+}
+/* Styling the photography section */
+.photography {
+    background-color: #f9f9f9; /* Setting a light gray background */
+    padding: 20px; /* Adding padding to the content */
+    text-align: center; /* Centering the text */
+}
+
+/* Styling paragraphs within the photography section */
+.photography p {
+    font-size: 16px;
+    color: #555; /* Setting a medium gray text color */
+}
+
+/* Styling the navigation bar */
+.navbar {
+    background-color: #e5e5e5; /* Setting a light gray background */
+    height: 90px; /* Setting a fixed height */
+    display: flex;
+    justify-content: center; /* Centering horizontally */
+    align-items: center; /* Centering vertically */
+}
+
+/* Styling the navigation list */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Displaying the list items in a row */
+}
+
+/* Styling the navigation links */
+li {
+    padding: 15px; /* Adding padding to the list items */
+}
+
+nav a {
+    text-decoration: none;
+    color: #353535; /* Setting a dark gray text color */
+    display: inline-block;
+    padding-top: 15px; /* Adding padding to the top of the links */
+}
+
+/* Hover effect for navigation links */
+nav a:hover {
+    color: #00b2b2; /* Changing text color on hover */
+}
+
+/* Active state for navigation links */
+nav a:active {
+    font-weight: bold; /* Making the text bold when the link is active */
+}
+
+/* Responsive styles for screens with a maximum width of 700px */
+@media screen and (max-width: 700px) {
+    /* Adjusting the layout for smaller screens */
+
+    /* Adjusting the logo container for smaller screens */
+    #logogr {
+        flex-direction: column; /* Stacking elements vertically */
+    }
+
+    /* Adjusting font size and line height for the entire document */
+    body {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /* Adjusting paragraph font size for about-us and photography sections */
+    .about-us p,
+    .photography p {
+        font-size: 14px;
+    }
+
+    /* Adjusting navigation bar styles for smaller screens */
+    .navbar {
+        height: auto; /* Allowing the height to adjust automatically */
+        padding: 10px; /* Adding padding to the navigation bar */
+        padding-bottom: 230px;
+        font-size: large;
+    }
+
+    /* Adjusting the logo size for smaller screens */
+    .navbar img {
+        width: auto;
+        height: 30px; /* Adjusting the height as needed */
+    }
+
+    /* Adjusting navigation styles for smaller screens */
+    nav {
+        width: 100%; /* Taking up the full width of the container */
+        margin-top: -5px; /* Adjusting the margin for better alignment */
+    }
+
+    /* Adjusting navigation list styles for smaller screens */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjusting navigation item styles for smaller screens */
+    nav li {
+        display: block;
+        background-color: #e5e5e5; /* Setting a light gray background */
+        text-align: center;
+    }
+}
+
+/* Applying the Montserrat font to all elements */
+* {
+    font-family: Montserrat, sans-serif;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.question {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.options {
+    text-align: center;
+}
+
+.option {
+    margin-bottom: 5px;
+}
+
+button {
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}
+
+#quiz-feedback {
+    margin-top: 20px;
+    padding: 10px;
+    display: none;
+}
+.slideshow-container {
+    max-width: 600px;
+    position: relative;
+    margin: auto;
+}
+
+.card {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    font-size: 400%;
+}
+/* Add your CSS styles for the slideshow here */
+.slideshow-container {
+    max-width: 600px;
+    position: relative;
+    margin: auto;
+}
+
+.card, .question-card {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+/* Add your existing CSS styles here */
+#header {
+    background-color: #007d8d;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo img {
+    width: 100px;
+    height: 100px;
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu ul li {
+    display: inline;
+    margin-right: 20px;
+    position: relative;
+}
+
+#menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+#menu ul li a:hover {
+    color: #a50044;
+}
+
+#menu ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #007d8d;
+    padding: 0;
+    z-index: 1;
+    width: 200px;
+}
+
+#menu ul li:hover ul {
+    display: block;
+}
+
+#menu ul ul li {
+    display: block;
+    margin: 0;
+    padding: 10px 0;
+}
+
+#menu ul ul li a {
+    color: #fff;
+}
+
+#content {
+    width: 100%;
+}
+
+#slideshow {
+    width: 100%;
+    height: 900px;
+    overflow: hidden;
+    position: relative;
+}
+
+#slideshow img {
+    width: 100%;
+    height: 900px;
+    object-fit: cover;
+    position: absolute;
+    transition: opacity 1s;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.teacher img {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .teacher img:hover {
+    transform: scale(1.1);
+  }
+.overlay:hover {
+    opacity: 1;
+}
+
+#teachers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.teacher {
+    width: 23%;
+    margin-bottom: 20px;
+}
+
+.teacher img {
+    max-width: 100%;
+    height: auto;
+    
+}

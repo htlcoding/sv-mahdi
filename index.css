@@ -1,0 +1,151 @@
+/* Resetting default margin and padding for the entire document */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling the about-us section */
+.about-us {
+    background-color: #f0f0f0; /* Setting a light gray background */
+    padding: 20px; /* Adding padding to the content */
+    text-align: center; /* Centering the text */
+}
+/* Styling paragraphs within the about-us section */
+.about-us p {
+    font-size: 16px;
+    color: #333; /* Setting a dark gray text color */
+}
+
+/* Styling the logo container */
+.logogr {
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centering horizontally */
+    align-items: center; /* Centering vertically */
+    margin-top: 10px;
+    margin-bottom: 100px;
+    height: 68vh; /* Setting height to 60% of the viewport height */   
+    width: 140;
+}
+#scrlbuttom {
+color: #333;
+text-align: center;
+font-size: x-large;
+}
+/* Styling the scroll down text */
+.logogr p {
+    position: absolute;
+    bottom: 0; /* Aligning the text to the bottom of the container */
+}
+/* Styling the photography section */
+.photography {
+    background-color: #f9f9f9; /* Setting a light gray background */
+    padding: 20px; /* Adding padding to the content */
+    text-align: center; /* Centering the text */
+}
+
+/* Styling paragraphs within the photography section */
+.photography p {
+    font-size: 16px;
+    color: #555; /* Setting a medium gray text color */
+}
+
+/* Styling the navigation bar */
+.navbar {
+    background-color: #e5e5e5; /* Setting a light gray background */
+    height: 90px; /* Setting a fixed height */
+    display: flex;
+    justify-content: center; /* Centering horizontally */
+    align-items: center; /* Centering vertically */
+}
+
+/* Styling the navigation list */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Displaying the list items in a row */
+}
+
+/* Styling the navigation links */
+li {
+    padding: 15px; /* Adding padding to the list items */
+}
+
+nav a {
+    text-decoration: none;
+    color: #353535; /* Setting a dark gray text color */
+    display: inline-block;
+    padding-top: 15px; /* Adding padding to the top of the links */
+}
+
+/* Hover effect for navigation links */
+nav a:hover {
+    color: #00b2b2; /* Changing text color on hover */
+}
+
+/* Active state for navigation links */
+nav a:active {
+    font-weight: bold; /* Making the text bold when the link is active */
+}
+
+/* Responsive styles for screens with a maximum width of 700px */
+@media screen and (max-width: 700px) {
+    /* Adjusting the layout for smaller screens */
+
+    /* Adjusting the logo container for smaller screens */
+    #logogr {
+        flex-direction: column; /* Stacking elements vertically */
+    }
+
+    /* Adjusting font size and line height for the entire document */
+    body {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /* Adjusting paragraph font size for about-us and photography sections */
+    .about-us p,
+    .photography p {
+        font-size: 14px;
+    }
+
+    /* Adjusting navigation bar styles for smaller screens */
+    .navbar {
+        height: auto; /* Allowing the height to adjust automatically */
+        padding: 10px; /* Adding padding to the navigation bar */
+        padding-bottom: 230px;
+        font-size: large;
+    }
+
+    /* Adjusting the logo size for smaller screens */
+    .navbar img {
+        width: auto;
+        height: 30px; /* Adjusting the height as needed */
+    }
+
+    /* Adjusting navigation styles for smaller screens */
+    nav {
+        width: 100%; /* Taking up the full width of the container */
+        margin-top: -5px; /* Adjusting the margin for better alignment */
+    }
+
+    /* Adjusting navigation list styles for smaller screens */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjusting navigation item styles for smaller screens */
+    nav li {
+        display: block;
+        background-color: #e5e5e5; /* Setting a light gray background */
+        text-align: center;
+    }
+}
+
+/* Applying the Montserrat font to all elements */
+* {
+    font-family: Montserrat, sans-serif;
+}

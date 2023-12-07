@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetCode</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="logogr">
+        <img src="logo.PNG" alt="Logo" width="200px">
+    </div>
+    <div id="scrlbuttom">
+        <p><a class="smooth-scroll" href="#scroll">//Scroll down</a></p>
+    </div>
+ <section id="scroll">
+    <div class="navbar">
+        <nav>
+            <ul>   
+                <li><a class="smooth-scroll" href="#photography">Über uns</a></li>
+                <li><a class="smooth-scroll" href="#software-development">Bildergalerie</a></li>
+                <li><a class="smooth-scroll" href="#web-development">Spieler</a></li>
+            </ul>
+        </nav>
+    </div>
+<section id="photography" class="about-us">
+    <h2>Über uns</h2>
+    <p>Willkommen beim SV Mahdi, Ihrem leidenschaftlichen Sportverein in Wien!</p>
+    <p>Seit unserer Gründung haben wir uns der Förderung des Sports und der Gemeinschaft in unserer Stadt verschrieben. Unser Verein bietet eine breite Palette von sportlichen Aktivitäten für Menschen jeden Alters und jeder Leistungsstufe. Der SV Mahdi ist stolz darauf, ein Ort zu sein, an dem Menschen mit ähnlichen Interessen zusammenkommen und Freundschaften fürs Leben schließen können. Wir freuen uns darauf, Sie in unserem Verein willkommen zu heißen und gemeinsam sportliche Erfolge zu feiern.</p>
+</section>
+<section id="software-development" class="about-us">
+    <h2>Bildergalerie</h2>
+    <p>Entdecken Sie unsere Bildergalerie</p>
+    <p><a href="pages/sew.html">Bildergalerie</a></p>
+</section>
+
+<section id="web-development" class="about-us">
+    <h2>Spieler</h2>
+    <p><a href="pages/web.html">Spieler</a></p>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollLinks = document.querySelectorAll('.smooth-scroll');
+
+    for (const scrollLink of scrollLinks) {
+        scrollLink.addEventListener('click', smoothScroll);
+    }
+
+    function smoothScroll(e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        const targetElement = document.getElementById(targetId.substring(1));
+
+        window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: 'smooth'
+        });
+    }
+});
+
+</script>
+</body>
+</html>
